@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "subconverter/subconverter",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "subconverter"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/subconverter/subconverter"
+    }
+  ]
+}
